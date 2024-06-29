@@ -35,5 +35,11 @@ export const globalStyles = StyleSheet.create({
         fontSize: 20,
         fontWeight:'500',
     },
+    textProduct: {
+        fontSize:25,
+        textAlign: 'center',
+        marginTop:20,
+
+    }
 
 });
