@@ -4,12 +4,14 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { DrawerNavigator } from './presentation/routes/DrawerNavigator';
+// import { BottomTabNavigator } from './presentation/routes/BottomTabNavigator';
 
 
 const App = () => {
   return (
     <NavigationContainer>
       <DrawerNavigator />
+       {/* <BottomTabNavigator />  */}
     </NavigationContainer>
   );
 };

@@ -1,13 +1,15 @@
+/* eslint-disable jsx-quotes */
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable eol-last */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable prettier/prettier */
 import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
-import { StackNavigator } from './StackNavigator';
+// import { StackNavigator } from './StackNavigator';
 import { ProfileScreen } from '../screens/profile/ProfileScreen';
 import { globalColors, globalStyles } from '../theme/theme';
 import { View, useWindowDimensions } from 'react-native';
+import { BottomTabNavigator } from './BottomTabNavigator';
 
 
 
@@ -40,8 +42,9 @@ export const DrawerNavigator = () => {
             },
         }}
     >
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
+      {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
+      <Drawer.Screen name='Tabs' component={BottomTabNavigator} />
+      <Drawer.Screen name='Profile' component={ProfileScreen} />
     </Drawer.Navigator>
   );
 };
