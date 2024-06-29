@@ -2,7 +2,7 @@
 /* eslint-disable jsx-quotes */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text, View, Pressable } from 'react-native';
+import {  View } from 'react-native';
 import { globalStyles } from '../../theme/theme';
 import { useNavigation } from '@react-navigation/native';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
