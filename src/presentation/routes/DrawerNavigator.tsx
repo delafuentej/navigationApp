@@ -48,7 +48,6 @@ export const DrawerNavigator = () => {
 
 const CustomDrawerContent = (props: DrawerContentComponentProps ) => {
 
-    
     return(
         <DrawerContentScrollView>
             <View
