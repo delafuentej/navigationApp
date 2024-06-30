@@ -5,8 +5,8 @@
 
 import {Text, View } from 'react-native';
 import { HamburgerMenu } from '../../components/shared/HamburgerMenu';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { globalColors} from '../../theme/theme';
+import { IonIcon } from '../../components/shared/IonIcon';
 
 
 export const Tab1Screen = () => {
@@ -14,7 +14,7 @@ export const Tab1Screen = () => {
     <View>
         <HamburgerMenu />
         <Text>Tab1Screen</Text>
-        <Text> <Icon name="rocket-outline" size={50} color={globalColors.white} /></Text>
+        <IonIcon name='rocket-outline' size={50} color={globalColors.white}/>
     </View>
   );
-};
+}

@@ -1,12 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import { Pressable, Text } from 'react-native';
+import { Pressable, Text, View} from 'react-native';
 import { globalStyles } from '../../theme/theme';
+
+
 
 interface Props {
     onPress: ()=> void;
     label: string;
+    
 }
 
 export const PrimaryButton = ({onPress, label}: Props) => {
@@ -15,7 +18,11 @@ export const PrimaryButton = ({onPress, label}: Props) => {
     <Pressable 
         onPress={onPress}
         style={globalStyles.primaryBtn}>
-      <Text style={globalStyles.textBtn}>{label}</Text>
+        <View>
+
+          <Text style={globalStyles.textBtn}>{label}</Text>
+        </View>
+     
   </Pressable>
   );
 };

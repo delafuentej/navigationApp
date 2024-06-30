@@ -7,6 +7,7 @@ import { Tab1Screen } from '../screens/tabs/Tab1Screen';
 import { globalColors } from '../theme/theme';
 import { MaterialTopTabNavigator } from './MaterialTopTabNavigator';
 import { StackNavigator } from './StackNavigator';
+import { IonIcon } from '../components/shared/IonIcon';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -17,6 +18,7 @@ export const  BottomTabNavigator = () => {
         backgroundColor: globalColors.background,
     }}
     screenOptions={{
+      tabBarActiveTintColor:globalColors.primary,
         // headerShown: false,
         tabBarLabelStyle: {
             marginBottom: 5,
@@ -32,9 +34,9 @@ export const  BottomTabNavigator = () => {
         },
     }}
     >
-      <BottomTab.Screen name="Tab1" options={{title:'Tab1'}} /* tabBarIcon: ({color}) =>(<Text style={{color}}>Tab1</Text>) */  component={Tab1Screen} />
-      <BottomTab.Screen name="Tab2" options={{title:'Tab2'}} /* tabBarIcon: ({color}) =>(<Text style={{color}}>Tab2</Text>) */ component={MaterialTopTabNavigator} />
-      <BottomTab.Screen name="Tab3" options={{title:'Tab3'}} /* tabBarIcon: ({color}) =>(<Text style={{color}}>Tab3</Text>) */ component={StackNavigator} />
+      <BottomTab.Screen name="Tab1" options={{title:'Tab1', tabBarIcon: ({color}) =>(<IonIcon name='mail-outline' color={color}/>) }}   component={Tab1Screen} />
+      <BottomTab.Screen name="Tab2" options={{title:'Tab2', tabBarIcon: ({color}) =>(<IonIcon name='planet-outline' color={color}/>)}}  component={MaterialTopTabNavigator} />
+      <BottomTab.Screen name="Tab3" options={{title:'Tab3', tabBarIcon: ({color}) =>(<IonIcon name='cart-outline' color={color}/>)}}  component={StackNavigator} />
     </BottomTab.Navigator>
   );
 }

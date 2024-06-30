@@ -9,6 +9,8 @@ import { HomeScreen } from '../screens/home/HomeScreen';
 import { ProductScreen } from '../screens/products/ProductScreen';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
+import { IonIcon } from '../components/shared/IonIcon';
+import { globalColors } from '../theme/theme';
 
 export type RootStackParams = {
     Home: undefined, // home does not receive any argument
@@ -38,10 +40,10 @@ export const  StackNavigator = ()=>  {
             },
         }}
     >
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen}   options={{headerRight: () =>(<IonIcon name='home-outline' size={50} color={globalColors.primary}/>) }}/>
       <Stack.Screen name="Products" component={ProductsScreen} />
-      <Stack.Screen name="Product" component={ProductScreen} />
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="Product" component={ProductScreen}  />
+      <Stack.Screen name="Settings" component={SettingsScreen}  />
     </Stack.Navigator>
   );
 };

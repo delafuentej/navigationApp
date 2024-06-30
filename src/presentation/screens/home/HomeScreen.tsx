@@ -8,6 +8,8 @@ import { globalStyles } from '../../theme/theme';
 import { type NavigationProp, useNavigation, DrawerActions } from '@react-navigation/native';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
 import { type RootStackParams } from '../../routes/StackNavigator';
+import { HamburgerMenu } from '../../components/shared/HamburgerMenu';
+import { IonIcon } from '../../components/shared/IonIcon';
 
 
 
@@ -21,7 +23,7 @@ export const HomeScreen = () => {
             <Pressable
             onPress={()=> navigation.dispatch( DrawerActions.toggleDrawer)}
             >
-              <Text>Menu</Text>
+             <HamburgerMenu />
             </Pressable>
           ),
       });
@@ -37,7 +39,7 @@ export const HomeScreen = () => {
       <PrimaryButton 
         onPress={()=> navigation.navigate('Products')}
         label='Products'
-      />
+      ><IonIcon /></PrimaryButton>
       <PrimaryButton
         onPress={()=> navigation.navigate('Settings')}
         label='Settings'
